@@ -21,7 +21,6 @@ function App() {
     try {
       const parsedJson = JSON.parse(jsonInput);
       const res = await axios.post(`${import.meta.env.VITE_Backend_Url}/bfhl`, parsedJson);
-      console.log(import.meta.env.VITE_Backend_Url);
       
       setResponse(res.data);
     } catch (error) {
